@@ -1,12 +1,13 @@
 import React from 'react';
-import { Title } from './styled';
+import Logo from './components/Logo';
 
 function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <Title>Hello World!</Title>
+        <Logo />
       </header>
+      <main className="App-main"></main>
     </div>
   );
 }
