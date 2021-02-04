@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './components/Logo';
+import ProductList from './components/ProductList';
 
 function App(): JSX.Element {
   return (
@@ -7,7 +8,9 @@ function App(): JSX.Element {
       <header className="App-header">
         <Logo />
       </header>
-      <main className="App-main"></main>
+      <main className="App-main">
+        <ProductList />
+      </main>
     </div>
   );
 }

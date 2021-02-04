@@ -5,7 +5,7 @@ import { ReactComponent as LogoSVG } from '../../assets/logo.svg';
 export const LogoWrapper = styled.div`
   & svg {
     width: 70vw;
-    max-width: 40rem;
+    max-width: 35rem;
   }
 `;
 
