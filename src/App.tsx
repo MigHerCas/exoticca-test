@@ -1,17 +1,18 @@
 import React from 'react';
 import Logo from './components/Logo';
 import ProductList from './components/ProductList';
+import { LayoutWrapper, Header, Main } from './components/Layout/styled';
 
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
+    <LayoutWrapper>
+      <Header>
         <Logo />
-      </header>
-      <main className="App-main">
+      </Header>
+      <Main>
         <ProductList />
-      </main>
-    </div>
+      </Main>
+    </LayoutWrapper>
   );
 }
 

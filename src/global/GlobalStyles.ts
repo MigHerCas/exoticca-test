@@ -1,49 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  .App {
-    position: relative;
-    min-height: 100vh;
-    background-color: #2A2A2A;
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 3rem;
-
-    @media (min-width: 1024px) {
-      padding: 8rem 3rem 3rem 8rem;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 3rem;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background-color: #B29662;
-
-      @media (min-width: 1024px) {
-        height: 100%;
-        width: 5rem;
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100vw;
-      height: 3rem;
-      bottom: 0;
-      left: 0;
-      background-color: #B29662;
-
-      @media (min-width: 1024px) {
-        height: 5rem;
-        top: 0;
-        left: 0;
-      }
-    }
-  }
 
   *,
   *::before,
@@ -68,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     margin: 0;
     scroll-behavior: smooth;
+    background-color: #2a2a2a;
   }
 
   /*
