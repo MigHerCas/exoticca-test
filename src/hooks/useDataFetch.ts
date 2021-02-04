@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { MarketType, Slide } from '../models/index';
+import { ApiResponse, MarketType, Slide } from '../models/index';
 
 type HookReturns = {
-  data: Slide | undefined;
+  slide: Slide | undefined;
   isLoading: boolean;
   isError: boolean;
 };
@@ -15,7 +15,7 @@ function getMarketApiUrl(marketType: MarketType): string {
 }
 
 const useDataFetch = (marketType: MarketType = 'us'): HookReturns => {
-  const [data, setData] = useState<Slide>();
+  const [slide, setSlide] = useState<Slide>();
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const processedUrl = getMarketApiUrl(marketType);
@@ -32,10 +32,11 @@ const useDataFetch = (marketType: MarketType = 'us'): HookReturns => {
             Accept: 'application/json',
           },
         });
-        const dataJson = await response;
-        const newData = await dataJson.json();
+        const newData = (await response.json()) as Promise<ApiResponse>;
+        const fetchedSlides = (await newData).slides;
 
-        setData(newData);
+        // As the selected slide is not representative, we randomly pick the first one
+        setSlide(fetchedSlides[0]);
       } catch (error) {
         setIsError(true);
         return error;
@@ -47,7 +48,7 @@ const useDataFetch = (marketType: MarketType = 'us'): HookReturns => {
     fetchData();
   }, [processedUrl]);
 
-  return { data, isLoading, isError };
+  return { slide, isLoading, isError };
 };
 
 export default useDataFetch;
