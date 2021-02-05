@@ -1,3 +1,19 @@
+# Installation 🛠️
+First, project dependencies installation:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+As .env variables are used within this project, you need to set them up.
+
+```bash
+cp .env.sample .env
+```
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
