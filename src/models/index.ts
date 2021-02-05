@@ -14,9 +14,11 @@ export interface SlideCard {
   days: string;
   destination: string;
   fromPriceBeautify: string;
-  image: {
-    url: string;
-  };
+  image: Array<ImageObject>;
   title: string;
+  url: string;
+}
+
+interface ImageObject {
   url: string;
 }

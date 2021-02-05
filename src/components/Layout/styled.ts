@@ -8,8 +8,8 @@ export const LayoutWrapper = styled.div`
   padding: 5rem 3rem;
   max-width: 136rem;
 
-  @media (min-width: 1024px) {
-    padding: 8rem 3rem 3rem 8rem;
+  @media (min-width: 1200px) {
+    padding: 10rem 3rem 3rem 10rem;
   }
 
   &::before {
@@ -45,7 +45,12 @@ export const LayoutWrapper = styled.div`
 `;
 
 export const Header = styled.header`
-  margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
 `;
 
 export const Main = styled.main``;
