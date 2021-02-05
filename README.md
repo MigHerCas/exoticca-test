@@ -25,7 +25,7 @@ yarn run server
 ```
 [ Tab 2 ]
 
-Start Next.js in development mode.
+Run it in development mode.
 
 ```bash
 npm run start
