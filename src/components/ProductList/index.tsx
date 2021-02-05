@@ -21,8 +21,6 @@ const ProductList = (): JSX.Element => {
   const [selectedMarket, setSelectedMarket] = useState<MarketType>('us');
   const { slide, isLoading } = useDataFetch(selectedMarket);
 
-  console.log(selectedMarket);
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChange = (e: any): void => {
     setSelectedMarket(e.target.value);
@@ -62,8 +60,6 @@ const ProductList = (): JSX.Element => {
         breakpoints={swiperBreakpoints}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log('Swiper: ', swiper)}
       >
         {slide?.cards?.length &&
           slide.cards?.map((card) => (
